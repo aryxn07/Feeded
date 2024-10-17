@@ -1,0 +1,67 @@
+<% layout("/layouts/boilerplate")%>
+    <body>
+        <div class="dashboard">
+            <div class="dashboard-text">
+                <h2>Here's a quick demo for you 👉</h2>
+                <p>You will find everything you need to get started to collect feedback and build a wall of testimonial
+                </p>
+            </div>
+            <div class="dashboard-img">
+                <img src="img/tutorial.jpg" width="200px" height="170px" alt="">
+            </div>
+        </div>
+        <br>
+        <div id="create">
+            <h2>Products</h2>
+            <form action="/new" method="get">
+                <button>Add new Product</button>
+            </form>
+        </div>
+        <br><br>
+        <div class="dash">
+
+            <div class="options">
+                <h5>Inbox</h5>
+                <br>
+                <p><i class="fa-regular fa-folder"></i>&nbsp;&nbsp;All</p>
+                <p><i class="fa-regular fa-message"></i> &nbsp;&nbsp;Text</p>
+                <p><i class="fa-solid fa-video"></i>&nbsp;&nbsp;Video</p>
+                <p><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;Liked</p>
+                <p><i class="fa-solid fa-inbox"></i>&nbsp;&nbsp;Archived</p>
+            </div>
+
+            <div class="dash-product">
+                <div class="search-bar">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search for your products here"
+                                aria-label="Search">
+                            <button class="btn" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <% for(let product of user.products){ %>
+                        <a href="/product/<%= product.name %>">
+                            <form method="get">
+                                <div class="card cardd" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <div id="img"> <img src="<%= product.image.url%>" alt=""></div>
+                                        <strong id="name">
+                                            <%= product.name %>
+                                        </strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Reviews: <%= product.reviews.length %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </a>
+                        <% } %>
+                </div>
+            </div>
+
+        </div>
+    </body>

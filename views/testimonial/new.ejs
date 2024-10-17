@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    <br><br><br><br><br>
+    <h3>Add new product</h3>
+   
+    <div class="form formm login">
+        <form action="/dashboard" method="post"  class="needs-validation" novalidate  enctype="multipart/form-data" >
+            <div class="mb-3">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" name="product[name]" class="form-control" placeholder="Enter Product Name" required>
+                <div class="valid-feedback">Great !</div>
+                <div class="invalid-feedback">Enter a name</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Product Image</label>
+                <input type="file" name="product[image]" class="form-control"  required>
+                <div class="valid-feedback">Looks good</div>
+                <div class="invalid-feedback">Add an image</div>
+            </div>
+
+                <button class="btn btn-primary">Add Product</button>
+        </form>
+    </div>
+</body>

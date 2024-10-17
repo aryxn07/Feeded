@@ -1,0 +1,96 @@
+<% layout("/layouts/boilerplate")%>
+
+    <body>
+        <div class="product-description">
+            <div class="pro">
+                <div class="product-img">
+                    <img src="<%=product.image.url%>" alt="">
+                </div>
+                <div class="product-name">
+                    <h1><%= product.name %> </h1>
+                    <div> owner: @<Strong><%= product.owner  %></Strong></div>
+                    <a href="/<%= product.name%>/reviews">public URL: <span style="color: rgb(58, 58, 225);">https://<%=
+                                product.name%>/reviews</span> </a>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <p>Total reviews: <%= product.reviews.length %> </p>
+                <div class="delete">
+                    <button>Edit</button>
+                    <form action="/product/<%=product.name%>?_method=DELETE" method="post">
+                        <button id="delete-btn" type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-reviews">
+            <div class="options">
+                <h5>Inbox</h5>
+                <br>
+                <p><i class="fa-regular fa-folder"></i>&nbsp;&nbsp;All</p>
+                <p><i class="fa-regular fa-message"></i> &nbsp;&nbsp;Text</p>
+                <p><i class="fa-solid fa-video"></i>&nbsp;&nbsp;Video</p>
+                <p><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;Liked</p>
+                <p><i class="fa-solid fa-inbox"></i>&nbsp;&nbsp;Archived</p>
+            </div>
+
+            <div class="reviews">
+                <div class="search-bar">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search for reviews here"
+                                aria-label="Search">
+                            <button class="btn" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <% for(review of product.reviews){ %>
+                    <div class="card" id="reviews">
+                        <div class="row g-0" id="review">
+                            <div class="col-md-4" id="col">
+                                <img src="<%= review.image.url %>" id="card-img" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="card-title" id="pro-title">
+                                        <div id="dropdown">
+                                            <p class="starability-result" data-rating="<%= review.rating %>"></p>
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <form
+                                                            action="/<%= product.name %>/<%= review._id %>?_method=DELETE"
+                                                            method="post"> <button type="submit">Delete Review</button></form>
+                                                    </li>
+                                                    <li>
+                                                        <form action="" method="get"> <button type="submit">Embed
+                                                                Review</button></form>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p class="card-text">
+                                        <%= review.description %>
+                                    </p>
+                                    <p class="card-text" ><small class="text-body-secondary" id="date">
+                                        <span>@<%= review.name %></span>
+                                        <span><%= review.createdAt.toDateString()%></span>
+                                    </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </body>

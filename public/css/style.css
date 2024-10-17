@@ -1,0 +1,404 @@
+
+body {
+  font-family: "Playfair Display", serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #FFFFFF !important;
+  color: black !important;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------Navbar------------ */
+.navbar{
+    height: 4rem;
+    background-color:#970747;
+    color: #FFFFFF !important;
+}
+.navbar a{
+    color: #FFFFFF;
+    margin-left: 1rem;
+}
+.fa-book-open-reader{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+/*---------------Cover--------- */
+
+.cover{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/img/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btnn{
+    border-radius: 10px;
+    background-color:#970747;
+    border-style: none;
+    width: 7rem;
+    height: 40px ;
+    margin: 5px 10px 0px 10px;
+    color: #FFFFFF;
+    
+}
+.btnn a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.img{
+    border: 1px solid #d1cfcf;
+    height: 70vh;
+    width: 100%;
+}
+#phone{
+    display: none;
+}
+
+/*---------Dashboard-------- */
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+    
+}
+.dashboard-text{
+padding-top: 3rem;
+}
+.dashboard-img{
+margin: 0 auto;
+}
+.dashboard-img img{
+    width: 100%;
+    height: 100%;
+}
+.dash{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.dash-product{
+    width: 100%;
+}
+
+.search-bar{
+    display: flex;
+    width: 87%;
+    align-items: flex-end;
+}
+#create{
+display: flex;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+}
+#create button{
+    border-style: none;
+    border-radius: 5px;
+    background-color: #970747;
+    color: #FFFFFF;
+    width: 150px;
+    height: 36px;
+    margin: 0 5px 0 5px;
+}
+.search-bar form{
+    height: 36px;
+}
+.search-bar form button{
+    width: 100px;
+    border-radius: 5px;
+    height: 100%;
+    border-style: none;
+    background-color: #EEEEEE;
+    color: black;
+}
+.search-bar form input{
+    background-color:#EEEEEE;
+    border-style: none;
+}
+::placeholder{
+    color: black !important;
+}
+.products{
+margin: 35px 0 1rem 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 80%;
+}
+.products a{
+    text-decoration: none;
+}
+.cardd{
+    margin: 0rem 2rem 2rem 2rem;
+    height: 15rem;
+    color: black!important;
+}
+#img{
+    width: 50px;
+    height: 45px;
+    display: inline-block;
+}
+#img img{
+    height: 100%;
+    width: 100%;
+}
+#name{
+    padding-left: 3rem;
+}
+.card-body{
+   margin: auto;
+}
+
+/* -------------New-------------- */
+.formm{
+    margin-top: 25px;
+    margin-bottom: 60px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 35%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+.formm button{
+    margin-left: 90px;
+    margin-top: 10px;
+    background-color: #970747;
+    color: #FFFFFF;
+    border-style: none;
+}
+.formm button:hover{
+background-color: #85053f !important;
+}
+.formm form{
+width: 70%;
+}
+
+/*-------- login page-------- */
+.login{
+    height: 40vh;
+    margin: 16px 0 120px 0;
+}
+#signup{
+    margin: 15px 0 86px 0;
+    height: 48vh;
+}
+
+/*------------Product Page---------- */
+.product-description{
+    padding: 2rem 0 0 0;
+    height: 26vh;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+}
+.pro{
+    display: flex;
+    width: 90%;
+}
+.product-img{
+    height: 100px;
+    width: 130px;
+}
+.product-img img{
+width: 100%;
+height: 100%;
+}
+.product-name{
+    margin-left: 1rem;
+}
+.product-name a{
+    text-decoration: none;
+    color:  black ;
+}
+.product-info button{
+    border-style: none;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    color: black;
+    width: 5rem;
+    margin: 0 5px 0 5px;
+}
+.delete{
+    display: flex;
+    
+}
+#delete-btn{
+    background-color: #c10c5e;
+    color: #EEEEEE;
+}
+.product-reviews{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 112px;
+    display: flex;
+}
+.options{
+width: 30%;
+display: flex;
+flex-direction: column;
+margin-left: 35px;
+}
+.reviews{
+    width: 100%;
+    /* height: 51vh; */
+}
+.reviews .card{
+width: 60%;
+margin: 1rem auto;
+}
+#reviews{
+    height: 180px;
+}
+#review{
+    height: 100%;
+}
+#col{
+    height: 100%;
+}
+#card-img{
+    height: 100%;
+}
+#pro-title{
+margin-bottom:0px;
+}
+#dropdown{
+    display: flex;
+    justify-content: space-between;
+}
+#dropdown button{
+border-style: none;
+margin:3px 0 3px 10px;
+background-color: white; 
+color: black;
+}
+#date{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -------New Review---------*/
+.starability-basic{
+    min-height: 0 !important;
+}
+#star{
+    padding: 0px 0px 0px 76px;
+}
+
+
+/*-------------Footer----------- */
+.f-info-links a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.f-info-socials {
+    padding-top: 6px;
+}
+.f-info-socials i{
+   font-size: 1.2rem;
+   margin-right: 1rem;
+}
+.f-info{
+    color: #FFFFFF;
+    height: 5rem;
+    background-color:#970747;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*------------Media Query--------- */
+@media  (max-width: 431px) {
+.cover{
+    width: 106%;
+    height: 42vh;
+    
+}
+.cover p{
+    display: none;
+}
+.img{
+    height: 28vh;
+}
+#laptop{
+    display: none;
+}
+#phone{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* dashboard */
+.dashboard-text{
+    display: none;
+}
+.options{
+    display: none;
+}
+.search-bar{
+    margin: auto;
+}
+
+
+/* product */
+.product-info{
+    display: none;
+}
+.product-description{
+    height: 19vh;
+}
+.reviews .card{
+    width: 96%;
+    margin: 4px;
+}
+#reviews{
+   height: auto;
+}
+#pro-title{
+    margin-left: 36px;
+}
+#col img{
+    width: 100%;
+}
+
+/* new product, new reviews, login, signup  */
+    .formm{
+        width: 86%;
+    }
+    .login{
+        margin: 30px 0  230px 0 ;
+    }
+    #signup{
+        margin: 36px 0 257px 0;
+        height: 39vh;
+    }
+    #add-review{
+        margin: 33px 0 211px 0;
+        height: 485px;
+    }
+    #add-review button{
+        margin: 25px 0 0 55px;
+    }
+    #star{
+        padding: 0 0 0 33px;
+    }
+      
+    
+  }

@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerplate") %>
+    <br>
+    <body>
+        <h3>Write Your FeedBack</h3>
+        <div class="form formm" id="add-review">
+           
+            <form action="/<%= product.name%>/reviews" method="post"  class="needs-validation" novalidate  enctype="multipart/form-data" >
+               
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" name="review[name]" class="form-control" placeholder="Write your name" required>
+                    <div class="invalid-feedback">Name required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description of product</label>
+                    <textarea type="text" name="review[description]" class="form-control"
+                        placeholder="Enter description" required></textarea>
+                        <div class="invalid-feedback">Description required</div>
+                </div>
+
+                <div class="mb-3" id="star">
+                    <fieldset class="starability-basic">
+                        <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
+                        <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                        <label for="first-rate1" title="Terrible">1 star</label>
+                        <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                        <label for="first-rate2" title="Not good">2 stars</label>
+                        <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                        <label for="first-rate3" title="Average">3 stars</label>
+                        <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                        <label for="first-rate4" title="Very good">4 stars</label>
+                        <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                        <label for="first-rate5" title="Amazing">5 stars</label>
+                      </fieldset>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Listing Image</label>
+                    <input type="file" name="review[image]" class="form-control" required>
+                </div>
+
+               
+                <button type="submit" class="btn btn-primary">Add Review</button>
+
+            </form>
+        </div>
+
+
+    </body>
